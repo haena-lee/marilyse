@@ -1,0 +1,29 @@
+nav {
+    text-transform: uppercase;
+    color: $text-color;
+    @include margin-center;
+    width: 50vw;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+
+li {
+    flex: 1;
+    text-align: center;
+    margin-top: $margin/2;
+}
+
+nav a {
+    @include plain-link;
+    color: $text-color;
+    font-size: $font-size-m;
+    font-family: $content-font;
+}
+
+nav a:hover {
+    color: rgb(197, 197, 197);
+}

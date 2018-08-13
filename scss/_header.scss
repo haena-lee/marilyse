@@ -1,0 +1,12 @@
+h1 {
+    color: $text-color;
+    text-transform: uppercase;
+    font-size: $font-size-xl;
+    font-family: $main-font;
+    text-align: center;
+}
+
+h1 a {
+    @include plain-link;
+    color: $text-color;
+}
