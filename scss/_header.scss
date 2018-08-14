@@ -4,9 +4,38 @@ h1 {
     font-size: $font-size-xl;
     font-family: $main-font;
     text-align: center;
+    padding-top: $margin;
 }
 
 h1 a {
     @include plain-link;
     color: $text-color;
+
+}
+
+.home-header {
+    background-image: url("../images/1920_2396_home_image.jpg");
+    min-height: 100vh;
+    background-size: cover;
+}
+
+.content {
+    background-image: url("../images/contact_dark_image.jpg");
+    min-height: 100vh;
+    background-size: cover;
+}
+
+.model-info, .contact-info {
+    color: $text-color;
+    font-family: $content-font;
+}
+
+.model-info {
+    margin-top: 10%;
+    margin-left: 30%;
+}
+
+.contact-info {
+    margin-top: 10%;
+    margin-left: 30%;
 }
