@@ -5,22 +5,30 @@ h1 {
     font-family: $main-font;
     text-align: center;
     padding-top: $margin;
+
+    a {
+        @include plain-link;
+        color: $text-color;
+    }
+
+    @media only screen and (max-width: $desktop) {
+        font-size: $font-size-l;
+    }
+
+
+
 }
 
-h1 a {
-    @include plain-link;
-    color: $text-color;
-
-}
 
 .home-header {
-    background-image: url("../images/1920_2396_home_image.jpg");
+    background: url("../images/1920_2396_home_image.jpg") no-repeat center top fixed;
     min-height: 100vh;
     background-size: cover;
+    position: relative;
 }
 
 .content {
-    background-image: url("../images/contact_dark_image.jpg");
+    background: url("../images/contact_dark_image.jpg") no-repeat center top fixed;
     min-height: 100vh;
     background-size: cover;
 }
@@ -28,6 +36,7 @@ h1 a {
 .model-info, .contact-info {
     color: $text-color;
     font-family: $content-font;
+    text-transform: uppercase;
 }
 
 .model-info {

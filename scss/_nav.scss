@@ -3,27 +3,54 @@ nav {
     color: $text-color;
     @include margin-center;
     width: 50vw;
+
+    a {
+        @include plain-link;
+        color: $text-color;
+        font-size: $font-size-m;
+        font-family: $content-font;
+    }
+
+    a:hover {
+        color: rgb(197, 197, 197);
+    }
+
+
+    ul {
+        display: flex;
+        list-style: none;
+        justify-content: space-between;
+    }
+    
+    li {
+        flex: 1;
+        text-align: center;
+        margin-top: $margin/2;
+    }
+
+    @media only screen and (max-width: $desktop) {
+        a {
+            font-size: $font-size-s;
+        }
+    }
+
+    @media only screen and (max-width: $tablet-portrait) {
+        margin: $margin*2 $margin;
+        display: none;
+
+        ul {
+            display: block;
+        }
+
+        li {
+            margin: $margin;
+            text-align: left;
+        }
+
+    }
+
 }
 
-ul {
-    display: flex;
-    list-style: none;
-    justify-content: space-between;
-}
-
-li {
-    flex: 1;
-    text-align: center;
-    margin-top: $margin/2;
-}
-
-nav a {
-    @include plain-link;
-    color: $text-color;
-    font-size: $font-size-m;
-    font-family: $content-font;
-}
-
-nav a:hover {
-    color: rgb(197, 197, 197);
+.show nav {
+    display: block;
 }
