@@ -59,24 +59,6 @@ h1 {
   background-size: cover;
   position: relative; }
 
-.content {
-  background: url("../images/contact_dark_image.jpg") no-repeat center top fixed;
-  min-height: 100vh;
-  background-size: cover; }
-
-.model-info, .contact-info {
-  color: white;
-  font-family: "Montserrat", sans-serif;
-  text-transform: uppercase; }
-
-.model-info {
-  margin-top: 10%;
-  margin-left: 30%; }
-
-.contact-info {
-  margin-top: 10%;
-  margin-left: 30%; }
-
 nav {
   text-transform: uppercase;
   color: white;
@@ -164,6 +146,72 @@ body {
 @keyframes come-in {
   to {
     transform: translateY(0); } }
+.content {
+  background: url("../images/contact_dark_image.jpg") no-repeat center top fixed;
+  min-height: 100vh;
+  background-size: cover; }
+  .content .model-info, .content .contact-info {
+    color: #c7c7c7;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    line-height: 25px; }
+  .content .model-info {
+    margin-top: 10%;
+    margin-left: 30%; }
+    .content .model-info h3 {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 30px;
+      position: relative;
+      padding-bottom: 8px; }
+    .content .model-info h3:after {
+      content: '';
+      width: 35px;
+      position: absolute;
+      height: 1px;
+      left: 0;
+      bottom: 0;
+      background-color: #c7c7c7; }
+    .content .model-info p {
+      font-size: 14px; }
+  .content .contact-info {
+    margin-top: 10%;
+    margin-left: 30%; }
+    .content .contact-info h3 {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 30px;
+      position: relative;
+      padding-bottom: 8px; }
+    .content .contact-info h3:after {
+      content: '';
+      width: 35px;
+      position: absolute;
+      height: 1px;
+      left: 0;
+      bottom: 0;
+      background-color: #c7c7c7; }
+    .content .contact-info p {
+      font-size: 14px; }
+    .content .contact-info a {
+      text-decoration: none;
+      color: #c7c7c7;
+      padding-bottom: 5px;
+      position: relative; }
+    .content .contact-info a:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      display: block;
+      right: 0;
+      background-color: #c7c7c7;
+      transition: width .3s ease; }
+    .content .contact-info a:hover:after {
+      width: 100%;
+      left: 0;
+      background-color: #c7c7c7; }
+
 .hamburger {
   background-color: transparent;
   border: none;
