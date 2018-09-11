@@ -6,67 +6,50 @@ body {
     width: 100%;
     height: 100vh;
     @include margin-center;
+
+    .line-break {
+        display: block;
+        border-top: 1px solid $text-color-grey;
+        width: 70%;
+        color: white;
+        @include margin-center;
+        margin-top: $margin*3;
+    }
 }
 
 .gallery {
     margin: 80px auto;
     max-width: 1000px;
-    img {
-        margin-top: 20px;
-        transition: all .6s ease-in-out;
-    }
-    img:hover {
-        transform: scale(1.02);
-    }
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 8px;
 
-    .row {
-        display: flex;
-    }
-    
-    .row img {
-        flex: 50%;
-        max-width: 100%;
-        padding: 0 10px;
-    }
-    
-    .wide-row {
-        display: flex;
-    }
-    
-    .wide-row img {
-        flex: 1;
-        max-width: 100%;
-        padding: 0 10px;
-    }
-    
-    @media only screen and (max-width: $desktop){
-        max-width: 80%;
-    }
+    .column {
+        flex: 33%;
+        max-width: 33%;
+        padding: 0 8px;
 
-    @media only screen and (max-width: $tablet-portrait){
-        .row, .wide-row {
-            display: block;
+        img {
+            width: 100%;
+            margin-top: 16px;
+            vertical-align: middle;
         }
     }
 
+    @media screen and (max-width: $desktop){
+        max-width: 80%;
+    }
+
+    @media screen and (max-width: $tablet-portrait){
+        max-width: 100%; 
+        .column {
+            @include margin-center;
+            flex: 100%;
+            max-width: 80%;
+        }
+    }
 }
 
-
-.image {
-    transform: translateY(150px);
-    animation: come-in 0.8s ease forwards;
-  }
-  .row:nth-child(even) {
-    animation-duration: 0.6s;
-  }
-  .already-visible {
-    transform: translateY(0);
-    animation: none;
-  }
-  
-  @keyframes come-in {
-    to { transform: translateY(0); }
-  }
 
 
  // Model info
@@ -81,6 +64,7 @@ body {
         font-family: $content-font;
         text-transform: uppercase;
         line-height: 25px;
+
     }
     
     .model-info {
@@ -158,6 +142,17 @@ body {
             width: 100%;
             left: 0;
             background-color: $text-color-grey;
+        }
+    }
+
+    @media only screen and (max-width: $tablet-portrait){
+        .model-info{
+            margin-top: 20%;
+            margin-left: 10%;
+        }
+        .contact-info{
+            margin-top: 10%;
+            margin-left: 10%;
         }
     }
 

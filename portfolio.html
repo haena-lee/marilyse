@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <link href="styles/lightbox.css" rel="stylesheet">
     <title>Marilyse</title>
 </head>
 
@@ -28,33 +29,28 @@
             </nav>
         </header>
 
+        <span class="line-break"></span>
+
         <div class="gallery">
-            <div class="row">
-                <div class="image image01"><img src="../images/image01.jpg"></div>
-                <div class="image image02"><img src="../images/image02.jpg"></div>
-            </div>
-            <div class="row">
-                <div class="image image03"><img src="../images/image03.jpg"></div>
-                <div class="image image04"><img src="../images/image04.jpg"></div>
-            </div>
-            <div class="row">
-                <div class="image image06"><img src="../images/image06.jpg"></div>
-                <div class="image image05"><img src="../images/image05.jpg"></div>
-            </div>
-            <div class="wide-row">
-                <div class="image image11"><img src="../images/image11.jpg"></div>
-            </div>
-            <div class="row">
-                <div class="image image07"><img src="../images/image07.jpg"></div>
-                <div class="image image08"><img src="../images/image08.jpg"></div>
-            </div>
-            <div class="row">
-                <div class="image image09"><img src="../images/image09.jpg"></div>
-                <div class="image image10"><img src="../images/image10.jpg"></div>
-            </div>
-            <div class="wide-row">
-                <div class="image image12"><img src="../images/image12.jpg"></div>
-            </div>
+            <div class="column">
+                <a href="../images/image09.jpg" data-lightbox="portfolio" data-title="Model image"><img src="../images/image09.jpg"></a>
+                <a href="../images/image10.jpg" data-lightbox="portfolio" data-title="Model image"><img src="../images/image10.jpg"></a>
+                <a href="../images/image11.jpg" data-lightbox="portfolio" data-title="Model image"><img src="../images/image11.jpg"></a>
+                <a href="../images/image12.jpg" data-lightbox="portfolio" data-title="Model image"><img src="../images/image12.jpg"></a>
+            </div> <!-- end of column --> 
+            <div class="column">
+                <a href="../images/image01.jpg" data-lightbox="portfolio" data-title="Model image"><img src="../images/image01.jpg"></a>
+                <a href="../images/image02.jpg" data-lightbox="portfolio" data-title="Model image"><img src="../images/image02.jpg"></a>
+                <a href="../images/image03.jpg" data-lightbox="portfolio" data-title="Model image"><img src="../images/image03.jpg"></a>
+                <a href="../images/image04.jpg" data-lightbox="portfolio" data-title="Model image"><img src="../images/image04.jpg"></a>
+            </div> <!-- end of column --> 
+            <div class="column">
+                <a href="../images/image05.jpg" data-lightbox="portfolio" data-title="Model image"><img src="../images/image05.jpg"></a>
+                <a href="../images/image06.jpg" data-lightbox="portfolio" data-title="Model image"><img src="../images/image06.jpg"></a>
+                <a href="../images/image07.jpg" data-lightbox="portfolio" data-title="Model image"><img src="../images/image07.jpg"></a>
+                <a href="../images/image08.jpg" data-lightbox="portfolio" data-title="Model image"><img src="../images/image08.jpg"></a>
+            </div> <!-- end of column -->
+
         </div> <!-- gallery -->
 
         <footer>
@@ -69,6 +65,7 @@
     crossorigin="anonymous">
 </script>
 <script src="scripts/script.js"></script>
+<script src="scripts/lightbox.js"></script>
 
 </body>
 

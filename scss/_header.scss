@@ -22,8 +22,18 @@ h1 {
 
 .home-header {
     background: url("../images/1920_2396_home_image.jpg") no-repeat center top fixed;
-    min-height: 100vh;
+    min-height: 200vh;
     background-size: cover;
     position: relative;
+    background-attachment: scroll;
+
+    @media only screen and (max-width: $tablet-portrait) {
+        background-attachment: fixed;
+        min-height: 100vh;
+    }
+
 }
+
+
+
 

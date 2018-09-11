@@ -55,9 +55,14 @@ h1 {
 
 .home-header {
   background: url("../images/1920_2396_home_image.jpg") no-repeat center top fixed;
-  min-height: 100vh;
+  min-height: 200vh;
   background-size: cover;
-  position: relative; }
+  position: relative;
+  background-attachment: scroll; }
+  @media only screen and (max-width: 825px) {
+    .home-header {
+      background-attachment: fixed;
+      min-height: 100vh; } }
 
 nav {
   text-transform: uppercase;
@@ -104,48 +109,41 @@ body {
   height: 100vh;
   margin-left: auto;
   margin-right: auto; }
+  .wrapper .line-break {
+    display: block;
+    border-top: 1px solid #c7c7c7;
+    width: 70%;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 90px; }
 
 .gallery {
   margin: 80px auto;
-  max-width: 1000px; }
-  .gallery img {
-    margin-top: 20px;
-    transition: all .6s ease-in-out; }
-  .gallery img:hover {
-    transform: scale(1.02); }
-  .gallery .row {
-    display: flex; }
-  .gallery .row img {
-    flex: 50%;
-    max-width: 100%;
-    padding: 0 10px; }
-  .gallery .wide-row {
-    display: flex; }
-  .gallery .wide-row img {
-    flex: 1;
-    max-width: 100%;
-    padding: 0 10px; }
-  @media only screen and (max-width: 1080px) {
+  max-width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 8px; }
+  .gallery .column {
+    flex: 33%;
+    max-width: 33%;
+    padding: 0 8px; }
+    .gallery .column img {
+      width: 100%;
+      margin-top: 16px;
+      vertical-align: middle; }
+  @media screen and (max-width: 1080px) {
     .gallery {
       max-width: 80%; } }
-  @media only screen and (max-width: 825px) {
-    .gallery .row, .gallery .wide-row {
-      display: block; } }
+  @media screen and (max-width: 825px) {
+    .gallery {
+      max-width: 100%; }
+      .gallery .column {
+        margin-left: auto;
+        margin-right: auto;
+        flex: 100%;
+        max-width: 80%; } }
 
-.image {
-  transform: translateY(150px);
-  animation: come-in 0.8s ease forwards; }
-
-.row:nth-child(even) {
-  animation-duration: 0.6s; }
-
-.already-visible {
-  transform: translateY(0);
-  animation: none; }
-
-@keyframes come-in {
-  to {
-    transform: translateY(0); } }
 .content {
   background: url("../images/contact_dark_image.jpg") no-repeat center top fixed;
   min-height: 100vh;
@@ -211,6 +209,13 @@ body {
       width: 100%;
       left: 0;
       background-color: #c7c7c7; }
+  @media only screen and (max-width: 825px) {
+    .content .model-info {
+      margin-top: 20%;
+      margin-left: 10%; }
+    .content .contact-info {
+      margin-top: 10%;
+      margin-left: 10%; } }
 
 .hamburger {
   background-color: transparent;
